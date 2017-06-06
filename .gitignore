@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+.vscode/
+env/
+instance/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+s3_config*

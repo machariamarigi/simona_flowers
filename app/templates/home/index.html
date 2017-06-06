@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="image">
+    <h1 class="heading"></h1>
+</div>
+<div class="about">
+    <div class="container">
+        <h2>SIMONA FLOWERS</h2>
+        <p>Simona Flowers Limited is a nationally recognized, full service, social
+        and corporate events planning organization with a focus on specialized 
+        events and destination management.</p>
+        <p><a class="btn btn-large" href="{{ url_for('products.all_products') }}">Our Products</a></p>
+    </div>
+</div>
+<section class="wrapper floral-background">
+    <div class="container-fostrap">
+        <div>
+            <img src="{{ url_for('static', filename='img/floral_s.jpg') }}" class="fostrap-logo"/>
+            <h1 class="heading">
+                What we offer 
+            </h1>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <h3>Product Categories</h3>
+                    <hr class="intro-divider">
+                    {% for category in categories %}
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card" href="{{ url_for('products.products_by_category', category=category.name) }}">
+                            <img src="http://mybucket234343.s3.amazonaws.com/categories/{{category.image}}" />
+                          </a>
+                            <div class="card-content">
+                                <h4 class="card-title">
+                                    <a href="{{ url_for('products.products_by_category', category=category.name) }}">
+                                        {{ category.name }}
+                                    </a>
+                                </h4>
+                                <p class="">
+                                    {{ category.description }}
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="{{ url_for('products.products_by_category', category=category.name) }}" class="btn btn-link btn-block">
+                                    Products
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <h3>Events And Services</h3>
+                    <hr class="intro-divider">
+                    {% for event_service in events_services %}
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card" href="">
+                            <img src="http://mybucket234343.s3.amazonaws.com/events_services/{{event_service.image}}" />
+                          </a>
+                            <div class="card-content">
+                                <h4 class="card-title">{{ event_service.name }}</h4>
+                                <p class="">
+                                    {{ event_service.description }}
+                                </p>
+                            </div>
+                            <div class="card-read-more">
+                                <a href="" class="btn btn-link btn-block">
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

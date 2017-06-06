@@ -1,0 +1,37 @@
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %}Products{% endblock %}
+{% block body %}
+
+<div class="outer">
+    <div class="container">
+        {% for product in products %}
+            <div class="col-xs-12 col-sm-4">
+                <div class="card">
+                    <a class="img-card" href="">
+                    <img src="http://mybucket234343.s3.amazonaws.com/products/{{product.image}}" />
+                    </a>
+                    <div class="card-content">
+                        <h4 class="card-title">
+                            <a href="http://www.fostrap.com/2016/03/5-button-hover-animation-effects-css3.html">
+                                {{ product.name }}
+                            </a>
+                        </h4>
+                        <p class="">
+                            {{product.description}}
+                        </p>
+                        <p>
+                        Ksh. {{product.price}}
+                        </p>
+                    </div>
+                    <div class="card-read-more">
+                        <a href="/add_to_cart/{{product.id}}" class="btn btn-link btn-block">
+                            Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    <div>
+</div>
+{% endblock %}
