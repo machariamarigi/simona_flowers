@@ -79,10 +79,19 @@ footer a:hover {
 home content
 **/
 .home-content-header {
-    width: 500px;
-    margin: 40px auto 0 auto;
-    padding: 1%;
-    border-radius: 1%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    flex-flow: column;
+    color: #228b22;
+}
+
+.home-content-header img {
+    width: 100px;
 }
 
 
@@ -92,6 +101,8 @@ home content
 @media screen and (min-width: 768px) {
 
     nav {
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
     }
     
