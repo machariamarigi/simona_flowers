@@ -3,7 +3,7 @@ from flask import render_template
 from . import about_us
 
 
-@home.route('/about_us')
+@about_us.route('/about-us')
 def about_us():
     """Render the about us template on the /about_us route"""
     categories = Category.query.all()

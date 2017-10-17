@@ -30,14 +30,16 @@ def create_app(config_name):
         app.config.from_object(app_config[config_name])
         app.config.from_pyfile('config.py')
 
+    # import pdb; pdb.set_trace()
     db.init_app(app)
 
     login_manager.init_app(app)
     login_manager.login_message = "You must be logged in to access this page"
     login_manager.login_view = "auth.login"
 
+    from .models import User, Category, EventService, Products
     migrate = Migrate(app, db)
-
+    
     Bootstrap(app)
 
     from .auth import auth as auth_blueprint
