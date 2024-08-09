@@ -12,7 +12,7 @@ dockerpty==0.4.1
 docopt==0.6.2
 docutils==0.13.1
 dominate==2.3.1
-Flask==0.12.1
+Flask==0.12.2
 Flask-Bootstrap==3.3.7.1
 Flask-Login==0.4.0
 Flask-Migrate==2.0.3
@@ -26,6 +26,7 @@ jmespath==0.9.3
 Mako==1.0.6
 MarkupSafe==1.0
 mysqlclient==1.3.10
+nose==1.3.7
 packaging==16.8
 pathspec==0.5.0
 psycopg2==2.7.1
@@ -44,5 +45,5 @@ termcolor==1.1.0
 visitor==0.1.3
 wcwidth==0.1.7
 websocket-client==0.40.0
-Werkzeug==0.12.1
+Werkzeug==0.12.2
 WTForms==2.1

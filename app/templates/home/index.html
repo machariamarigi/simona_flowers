@@ -1,22 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
 {% block body %}
-<div class="image">
-    <h1 class="heading"></h1>
-</div>
-<div class="about">
-    <div class="container">
-        <h2>SIMONA FLOWERS</h2>
-        <p>Simona Flowers Limited is a nationally recognized, full service, social
-        and corporate events planning organization with a focus on specialized 
-        events and destination management.</p>
-        <p><a class="btn btn-large" href="{{ url_for('products.all_products') }}">Our Products</a></p>
-    </div>
-</div>
-<section class="wrapper floral-background">
-    <div class="container-fostrap">
-        <div>
-            <img src="{{ url_for('static', filename='img/floral_s.jpg') }}" class="fostrap-logo"/>
+<img src="{{ url_for('static', filename='img/simona-flowers-kenya-limited-logo.jpg') }}" alt="">
+<section class="floral-background">
+    <div class="flex-container">
+        <div class="home-content-header">
+            <img src="{{ url_for('static', filename='img/floral_s.jpg') }}" class="img-circle"/>
             <h1 class="heading">
                 What we offer 
             </h1>
